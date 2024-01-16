@@ -1,0 +1,16 @@
+pkgbase = ayaneo-platform
+	pkgdesc = Linux Driver for Ayaneo x86 handhelds
+	pkgver = v0.3.0.f2a02a0
+	pkgrel = 1
+	url = https://github.com/Lightwars/ayaneo-platform
+	arch = x86_64
+	license = GPL
+	makedepends = git
+	depends = dkms
+	conflicts = ayn-platform-dkms-git
+	source = ayn-platform::git+https://github.com/Lightwars/ayaneo-platform.git
+	source = dkms.conf
+	sha256sums = SKIP
+	sha256sums = 83597eb119dae0beba8b13fdd5501c800471f8862ac1c7e4e3723a5492994e23
+
+pkgname = ayaneo-platform
