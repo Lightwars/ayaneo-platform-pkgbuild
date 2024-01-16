@@ -11,6 +11,6 @@ pkgbase = ayaneo-platform
 	source = ayn-platform::git+https://github.com/Lightwars/ayaneo-platform.git
 	source = dkms.conf
 	sha256sums = SKIP
-	sha256sums = 83597eb119dae0beba8b13fdd5501c800471f8862ac1c7e4e3723a5492994e23
+	sha256sums = 9143c5abacaeffb5389dc9d1b95562c806c9399b1213aa939c7086a19d937e0d
 
 pkgname = ayaneo-platform
