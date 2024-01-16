@@ -1,0 +1,33 @@
+_pkgbase=ayaneo-platform
+pkgname=ayaneo-platform
+pkgver=v0.3.0.f2a02a0
+pkgrel=1
+pkgdesc="Linux Driver for Ayaneo x86 handhelds"
+arch=('x86_64')
+url="https://github.com/Lightwars/ayaneo-platform"
+license=('GPL')
+conflicts=('ayaneo-platform')
+depends=('dkms')
+makedepends=('git')
+source=("$_pkgbase::git+https://github.com/Lightwars/ayaneo-platform.git"
+        "dkms.conf")
+sha256sums=('SKIP'
+            '83597eb119dae0beba8b13fdd5501c800471f8862ac1c7e4e3723a5492994e23')
+
+pkgver() {
+  cd "$srcdir/${_pkgbase}"
+	git describe --long --tags | sed 's/\([^-]*-g\)/r\1/;s/-/./g'
+}
+
+package() {
+  cd "$srcdir/${_pkgbase}"
+
+  install -d "${pkgdir}"/usr/src/${_pkgbase}-${pkgver}/
+  cp -r ${srcdir}/${_pkgbase}/* "${pkgdir}"/usr/src/${_pkgbase}-${pkgver}/
+
+  install -Dm644 ${srcdir}/dkms.conf "${pkgdir}"/usr/src/${_pkgbase}-${pkgver}/dkms.conf
+
+  sed -e "s/@_PKGBASE@/${_pkgbase}/" \
+    -e "s/@PKGVER@/${pkgver}/" \
+    -i "${pkgdir}"/usr/src/${_pkgbase}-${pkgver}/dkms.conf
+}
