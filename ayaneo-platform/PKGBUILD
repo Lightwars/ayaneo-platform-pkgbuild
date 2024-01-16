@@ -1,3 +1,4 @@
+# Maintainer: Sebastian Kranz
 _pkgbase=ayaneo-platform
 pkgname=ayaneo-platform
 pkgver=v0.3.0.f2a02a0
@@ -12,7 +13,7 @@ makedepends=('git')
 source=("$_pkgbase::git+https://github.com/Lightwars/ayaneo-platform.git"
         "dkms.conf")
 sha256sums=('SKIP'
-            '83597eb119dae0beba8b13fdd5501c800471f8862ac1c7e4e3723a5492994e23')
+            '9143c5abacaeffb5389dc9d1b95562c806c9399b1213aa939c7086a19d937e0d')
 
 pkgver() {
   cd "$srcdir/${_pkgbase}"
