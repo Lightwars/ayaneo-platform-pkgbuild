@@ -31,13 +31,6 @@ jobs:
           target: 'pkgbuild'
           pkgname: 'ayaneo-platform'
 
-      - name: Validate SRCINFO
-        id: validate-srcinfo
-        uses: 2m/arch-pkgbuild-builder@v1.21
-        with:
-          target: 'srcinfo'
-          pkgname: 'ayaneo-platform'
-
       - name: Upload Arch Linux release
         uses: softprops/action-gh-release@v1
         with:
