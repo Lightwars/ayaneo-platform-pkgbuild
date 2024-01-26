@@ -42,5 +42,5 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          tag_name: ayaneo-platform-v0.3.r0.gf2a02a0
-          files: ayaneo-platform/ayaneo-platform-v0.3.r0.gf2a02a0-1-x86_64.pkg.tar.zst
+          tag_name: ayaneo-platform-v0.5.r0.g99a6189
+          files: ayaneo-platform/ayaneo-platform-v0.5.r0.g99a6189-1-x86_64.pkg.tar.zst
